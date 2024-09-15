@@ -13,3 +13,6 @@ Jövőbeli előrejelzések: A felhasználók kérhetnek előrejelzéseket külö
 Történelmi adatok: Az alkalmazás lehetővé teszi múltbéli időjárási adatok lekérdezését és megjelenítését (pl. 2000. április 1.)
 Adatok megjelenítése: Az adatok táblázatos és grafikus formában történő megjelenítése szükséges.
 Exportálási lehetőségek: Az időjárási adatokat exportálási lehetősége CSV formátumban a további elemzés érdekében.
+
+5. Rendszerre vonatkozó törvények
+A rendszernek meg kell felelnie az adatvédelmi előírásoknak, különösen az általános adatvédelmi rendeletnek (GDPR) az Európai Unióban, és a helyi adatvédelmi törvényeknek. A személyes adatok kezelése során biztosítani kell azok biztonságát és titkosságát. Az alkalmazásnak garantálnia kell, hogy az időjárási adatok gyűjtése és feldolgozása megfeleljen az összes vonatkozó jogszabálynak és iparági előírásnak. A rendszernek rendelkeznie kell megfelelő adatvédelmi és biztonsági intézkedésekkel, hogy megvédje a felhasználói adatokat.
