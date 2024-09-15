@@ -7,3 +7,9 @@ Jelenleg a FarmCrop Technologies időjárási információkat manuálisan gyűjt
 3. Vágyálom rendszer
 A kívánt rendszer olyan webes alkalmazás, amely valós idejű időjárási adatokat és előrejelzéseket biztosít a felhasználók számára. Az alkalmazásnak lehetőséget kell biztosítania a múltbéli időjárási adatok lekérésére is. Az adatok megjelenítése grafikonokkal és diagramokkal történik, hogy a felhasználók könnyen értelmezhessék azokat. A rendszernek reszponzívnak kell lennie, hogy asztali és mobil eszközökről egyaránt elérhető legyen.
 
+4. Funkcionális követelmények
+Valós idejű időjárási adatok: Az alkalmazásnak valós idejű adatokat kell szolgáltatnia a hőmérsékletről, csapadékról, páratartalomról és szélsebességről.
+Jövőbeli előrejelzések: A felhasználók kérhetnek előrejelzéseket különböző időtávokra (pl. 1 nap, 7 nap).
+Történelmi adatok: Az alkalmazás lehetővé teszi múltbéli időjárási adatok lekérdezését és megjelenítését (pl. 2000. április 1.)
+Adatok megjelenítése: Az adatok táblázatos és grafikus formában történő megjelenítése szükséges.
+Exportálási lehetőségek: Az időjárási adatokat exportálási lehetősége CSV formátumban a további elemzés érdekében.
