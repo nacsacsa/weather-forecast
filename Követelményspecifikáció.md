@@ -19,3 +19,9 @@ A rendszernek meg kell felelnie az adatvédelmi előírásoknak, különösen az
 
 6. Jelenlegi üzleti folyamatok modellje
 A jelenlegi üzleti folyamatok modellje magában foglalja az időjárási adatok manuális gyűjtését és feldolgozását, amelyet különböző forrásokból végeznek, mint például meteorológiai weboldalak és helyi jelentések. Az adatok rendszerezése és elemzése jelenleg részben papíralapú vagy egyszerű elektronikus táblázatokon történik. A folyamat időigényes és hajlamos a hibákra, mivel az adatok integrációja és elemzése nem automatizált. Az új alkalmazás célja ezen folyamatok automatizálása és a hatékonyság növelése az adatok valós idejű elérésével és elemzésével.
+
+7. Követelménylista
+Adatgyűjtés: Az alkalmazásnak képesnek kell lennie adatokat gyűjteni különböző időjárási forrásokból API-k segítségével.
+Felhasználói felület: A felhasználói felületnek intuitívnak kell lennie, és lehetőséget kell adnia az adatok egyszerű lekérésére és megjelenítésére.
+Egy városnév beírásával és egy dátum kiválasztásával előlehessen hívni a megfelelő időjárásbeli adatokat.
+Adatok exportálása: Az időjárási adatokat CSV formátumban kell exportálni.
