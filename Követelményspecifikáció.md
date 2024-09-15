@@ -16,3 +16,6 @@ Exportálási lehetőségek: Az időjárási adatokat exportálási lehetősége
 
 5. Rendszerre vonatkozó törvények
 A rendszernek meg kell felelnie az adatvédelmi előírásoknak, különösen az általános adatvédelmi rendeletnek (GDPR) az Európai Unióban, és a helyi adatvédelmi törvényeknek. A személyes adatok kezelése során biztosítani kell azok biztonságát és titkosságát. Az alkalmazásnak garantálnia kell, hogy az időjárási adatok gyűjtése és feldolgozása megfeleljen az összes vonatkozó jogszabálynak és iparági előírásnak. A rendszernek rendelkeznie kell megfelelő adatvédelmi és biztonsági intézkedésekkel, hogy megvédje a felhasználói adatokat.
+
+6. Jelenlegi üzleti folyamatok modellje
+A jelenlegi üzleti folyamatok modellje magában foglalja az időjárási adatok manuális gyűjtését és feldolgozását, amelyet különböző forrásokból végeznek, mint például meteorológiai weboldalak és helyi jelentések. Az adatok rendszerezése és elemzése jelenleg részben papíralapú vagy egyszerű elektronikus táblázatokon történik. A folyamat időigényes és hajlamos a hibákra, mivel az adatok integrációja és elemzése nem automatizált. Az új alkalmazás célja ezen folyamatok automatizálása és a hatékonyság növelése az adatok valós idejű elérésével és elemzésével.
