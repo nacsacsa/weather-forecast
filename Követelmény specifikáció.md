@@ -1,3 +1,5 @@
+Időjárás előrejelző követelmény specifikáció
+
 1. Áttekintés
 A FarmCrop Technologies egy olyan webes alkalmazást keres, amely lehetővé teszi az időjárási adatok valós idejű figyelését és előrejelzését, különösen mezőgazdasági célokra. Az alkalmazás célja, hogy segítséget nyújtson a mezőgazdasági munkálatok optimalizálásában az időjárási körülmények alapos nyomon követésével. Az időjárási adatok pontos ismerete segíthet a termékenység növelésében, a kockázatok csökkentésében és a hatékonyabb döntéshozatalban. A múltbéli időjárás adatok segíthetnek a jövőbeli időjárás megértésében. A projekt célja egy felhasználóbarát felület kialakítása, amely elérhető asztali és mobil eszközökről is webes felületen keresztül.
 
