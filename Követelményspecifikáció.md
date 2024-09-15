@@ -3,3 +3,7 @@ A FarmCrop Technologies egy olyan webes alkalmazást keres, amely lehetővé tes
 
 2. Jelenlegi helyzet
 Jelenleg a FarmCrop Technologies időjárási információkat manuálisan gyűjt, ami azt jelenti, hogy könyvárakban, helyi meteorológia állomásoknál vagy állami hatóságoknál, minisztériumoknál kell ezeket az adatokat kikérni, amit majd papiron jegyeznek fel a kollégák, amely időigényes és gyakran pontatlan. A meglévő módszerek nem teszik lehetővé az időjárási adatok gyors és könnyű elérését, valamint nem biztosítanak részletes előrejelzéseket. Az alkalmazott eszközök és források gyakran nem integráltak, ami nehézkessé teszi az adatok összegyűjtését és elemzését. Az új webes alkalmazás célja ezen problémák megoldása, és a folyamatok hatékonyabbá tétele.
+
+3. Vágyálom rendszer
+A kívánt rendszer olyan webes alkalmazás, amely valós idejű időjárási adatokat és előrejelzéseket biztosít a felhasználók számára. Az alkalmazásnak lehetőséget kell biztosítania a múltbéli időjárási adatok lekérésére is. Az adatok megjelenítése grafikonokkal és diagramokkal történik, hogy a felhasználók könnyen értelmezhessék azokat. A rendszernek reszponzívnak kell lennie, hogy asztali és mobil eszközökről egyaránt elérhető legyen.
+
