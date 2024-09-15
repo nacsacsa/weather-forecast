@@ -25,3 +25,11 @@ Adatgyűjtés: Az alkalmazásnak képesnek kell lennie adatokat gyűjteni külö
 Felhasználói felület: A felhasználói felületnek intuitívnak kell lennie, és lehetőséget kell adnia az adatok egyszerű lekérésére és megjelenítésére.
 Egy városnév beírásával és egy dátum kiválasztásával előlehessen hívni a megfelelő időjárásbeli adatokat.
 Adatok exportálása: Az időjárási adatokat CSV formátumban kell exportálni.
+
+8. Fogalomtár
+API (Application Programming Interface): Programozási felület, amely lehetővé teszi különböző szoftverek közötti kommunikációt és adatcserét.
+GDPR (General Data Protection Regulation): Az Európai Unió adatvédelmi rendelete, amely előírja a személyes adatok védelmét.
+Reszponzív webdesign: Weboldal kialakítási megközelítés, amely biztosítja, hogy az oldal különböző eszközökön is megfelelően jelenjen meg.
+Hőmérséklet: Az időjárási paraméter, amely a levegő melegét vagy hidegét méri.
+Páratartalom: Az időjárási paraméter, amely a levegő nedvességtartalmát jelzi.
+Csapadék: Az időjárási paraméter, amely az eső, hó, jég, vagy egyéb vízcseppek mennyiségét jelzi.
