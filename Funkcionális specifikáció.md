@@ -11,7 +11,7 @@ A FarmCrop Technologies jelenlegi időjárási adatgyűjtési folyamatai számos
 A meglévő eszközök és módszerek nem biztosítanak gyors és pontos hozzáférést az időjárási adatokhoz. A papíralapú nyilvántartások és egyszerű elektronikus táblázatok, amelyeket jelenleg használunk, gyakran hibásak vagy elavultak. Az adatok integrációja és elemzése nem automatizált, így a manuális feldolgozás során gyakoriak a hibák, és a szükséges információk gyakran késlekednek. Az adatok vizualizációja is korlátozott, ami megnehezíti az adatok gyors értelmezését és a megfelelő döntések meghozatalát.
 Az új webes alkalmazás bevezetése célja, hogy ezen problémákat megoldja. A rendszer automatizálni fogja az adatgyűjtést és az adatok feldolgozását, lehetővé téve az időjárási információk gyors és pontos hozzáférését. Az alkalmazás integrált megoldást kínál az adatok összegyűjtésére és elemzésére, amely jelentősen növeli a folyamat hatékonyságát, csökkenti a hibák számát, és biztosítja a szükséges információkat a mezőgazdasági döntéshozók számára. A cél az, hogy a mezőgazdasági tevékenységeket támogató időjárási információk hozzáférhetősége és pontossága jelentősen javuljon.
 
-3. Vágyálom rendszer
+## 3. Vágyálom rendszer
 A FarmCrop Technologies által kívánt webes alkalmazás egy átfogó megoldást kínál az időjárási adatok valós idejű nyomon követésére és előrejelzésére, amely kifejezetten a mezőgazdasági szektor igényeire van szabva. Az alkalmazás célja, hogy a felhasználók számára egyszerűen elérhetővé tegye az aktuális időjárási adatokat, valamint a múltbéli és jövőbeli időjárási információkat, amelyek segíthetnek a mezőgazdasági munkálatok tervezésében és optimalizálásában.
 A rendszer főbb jellemzői a következők:
 Valós idejű adatgyűjtés és előrejelzés: Az alkalmazás valós idejű adatokat biztosít a hőmérsékletről, csapadékról, páratartalomról és szélsebességről. Ezen kívül a felhasználók számára elérhetők lesznek különböző időtávokra szóló előrejelzések (pl. napi, heti).
@@ -22,7 +22,7 @@ Felhasználói jogosultságok kezelése: Az alkalmazás lehetőséget biztosít 
 Exportálási lehetőségek: Az időjárási adatokat exportálhatják CSV formátumban további elemzés céljából. Ez lehetővé teszi a felhasználók számára, hogy az adatokat könnyen integrálják más elemző eszközökkel.
 A cél egy olyan alkalmazás kifejlesztése, amely a mezőgazdasági szakemberek számára átfogó és könnyen használható eszközként szolgál, elősegítve ezzel a hatékonyabb döntéshozatalt és az időjárási körülményekhez való gyors alkalmazkodást.
 
-4. Funkcionális követelmények
+## 4. Funkcionális követelmények
 A FarmCrop Technologies által kívánt webes alkalmazásnak a következő funkcionális követelményeket kell teljesítenie:
 Valós idejű időjárási adatok: Az alkalmazásnak képesnek kell lennie arra, hogy valós időben szolgáltasson adatokat a következő időjárási paraméterekről:
 Hőmérséklet: A levegő aktuális hőmérséklete Celsius vagy Fahrenheit fokban.
