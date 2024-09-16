@@ -21,3 +21,25 @@ Felhasználói jogosultságok kezelése: Az alkalmazás lehetőséget biztosít 
 Exportálási lehetőségek: Az időjárási adatokat exportálhatják CSV formátumban további elemzés céljából. Ez lehetővé teszi a felhasználók számára, hogy az adatokat könnyen integrálják más elemző eszközökkel.
 A cél egy olyan alkalmazás kifejlesztése, amely a mezőgazdasági szakemberek számára átfogó és könnyen használható eszközként szolgál, elősegítve ezzel a hatékonyabb döntéshozatalt és az időjárási körülményekhez való gyors alkalmazkodást.
 
+4. Funkcionális követelmények
+A FarmCrop Technologies által kívánt webes alkalmazásnak a következő funkcionális követelményeket kell teljesítenie:
+Valós idejű időjárási adatok: Az alkalmazásnak képesnek kell lennie arra, hogy valós időben szolgáltasson adatokat a következő időjárási paraméterekről:
+Hőmérséklet: A levegő aktuális hőmérséklete Celsius vagy Fahrenheit fokban.
+Csapadék: Az aktuális eső-, hó- vagy jégmennyiség, amelyet milliméterben vagy inchben mérnek.
+Páratartalom: A levegő nedvességtartalma százalékos formában.
+Szélsebesség: A szél aktuális sebessége kilométer per órában (km/h) vagy mérföld per órában (mph).
+Jövőbeli előrejelzések: Az alkalmazásnak lehetőséget kell biztosítania arra, hogy a felhasználók különböző időtávokra kérhessenek időjárási előrejelzéseket:
+Rövid távú előrejelzések (pl. 1 napos előrejelzés).
+Hosszú távú előrejelzések (pl. 7 napos előrejelzés).
+Az előrejelzések tartalmazzák az összes fontos időjárási paramétert (hőmérséklet, csapadék, páratartalom, szélsebesség).
+Történelmi adatok lekérdezése: Az alkalmazásnak biztosítania kell a múltbéli időjárási adatok lekérdezését és megjelenítését. A felhasználóknak lehetősége lesz:
+Keresni és megtekinteni korábbi időszakok adatait, például a múlt hónapra vagy évre vonatkozóan.
+Összehasonlítani a múltbéli adatokat a jelenlegi adatokkal a trendek és minták észleléséhez.
+Adatok megjelenítése: Az időjárási adatokat különböző formátumokban kell megjeleníteni:
+Táblázatos formátum: Az adatok rendezett táblázatokban történő megjelenítése, amely könnyen átlátható és összehasonlítható.
+Grafikus formátum: Grafikonok és diagramok (pl. vonaldiagramok, oszlopdiagramok) használata az adatok vizuális megjelenítésére, hogy a felhasználók könnyen észlelhessek trendeket és változásokat.
+Felhasználói jogosultságok kezelése: Az alkalmazásnak támogatnia kell a felhasználói jogosultságok és hozzáférések kezelését, lehetővé téve az adminisztrátorok számára:
+Különböző szerepkörök és jogosultsági szintek beállítását (pl. adminisztrátor, standard felhasználó).
+A felhasználói fiókok és hozzáférések kezelését, biztosítva, hogy a felhasználók csak a jogosultságuknak megfelelő adatokhoz férhessenek hozzá.
+Exportálási lehetőségek: Az alkalmazásnak lehetőséget kell biztosítania az időjárási adatok exportálására CSV formátumban. Ez segíti a felhasználókat abban, hogy az adatokat könnyen továbbítsák más rendszerekbe, vagy további elemzéseket végezzenek rajtuk.
+Az alkalmazás célja, hogy a felhasználók számára egy átfogó, felhasználóbarát és hatékony eszközt biztosítson az időjárási adatok nyomon követésére, elemzésére és kezelésére, amely elősegíti a mezőgazdasági tevékenységek hatékonyabb tervezését és optimalizálását.
