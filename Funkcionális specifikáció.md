@@ -45,7 +45,7 @@ A felhasználói fiókok és hozzáférések kezelését, biztosítva, hogy a fe
 Exportálási lehetőségek: Az alkalmazásnak lehetőséget kell biztosítania az időjárási adatok exportálására CSV formátumban. Ez segíti a felhasználókat abban, hogy az adatokat könnyen továbbítsák más rendszerekbe, vagy további elemzéseket végezzenek rajtuk.
 Az alkalmazás célja, hogy a felhasználók számára egy átfogó, felhasználóbarát és hatékony eszközt biztosítson az időjárási adatok nyomon követésére, elemzésére és kezelésére, amely elősegíti a mezőgazdasági tevékenységek hatékonyabb tervezését és optimalizálását.
 
-5. Rendszerre vonatkozó törvények
+## 5. Rendszerre vonatkozó törvények
 A FarmCrop Technologies által fejlesztett időjárásfigyelő alkalmazásnak maradéktalanul meg kell felelnie a különböző adatvédelmi és biztonsági szabályozásoknak. Az Európai Unió által előírt Általános Adatvédelmi Rendelet (GDPR) különösen fontos szerepet játszik, mivel meghatározza, hogyan kell a felhasználói adatokat gyűjteni, tárolni, feldolgozni és megvédeni. Az alkalmazásnak biztosítania kell, hogy a felhasználók adatai – beleértve a személyes adatokat, valamint az időjárási jelentésekkel kapcsolatos adatokat – biztonságban legyenek, és azokhoz csak az arra jogosult felhasználók férhessenek hozzá.
 A rendszernek többféle adatvédelmi intézkedést kell alkalmaznia:
 
@@ -58,7 +58,7 @@ Emellett az alkalmazásnak biztosítania kell az időjárási adatok helyesség�
 
 Végezetül, az alkalmazás fejlesztésének és működtetésének minden szakaszában figyelemmel kell lenni a helyi és nemzetközi szabályozásokra, amelyek az adatvédelmet és az információbiztonságot szabályozzák, így biztosítva, hogy a rendszer minden tekintetben megfeleljen a jogi előírásoknak.
 
-6. Jelenlegi üzleti folyamatok modellje
+## 6. Jelenlegi üzleti folyamatok modellje
 A FarmCrop Technologies jelenlegi üzleti folyamatai az időjárási adatok gyűjtésében és kezelésében elsősorban manuálisak, és sok esetben több különböző, nem integrált forrásra támaszkodnak. Ez a jelenlegi helyzet jelentős mértékben hátráltatja a hatékony mezőgazdasági tervezést és döntéshozatalt, mivel az adatok elérhetősége lassú, a pontosság pedig nem mindig garantált.
 
 Adatgyűjtési források: A vállalat jelenleg különböző meteorológiai weboldalakról és helyi időjárási jelentésekből gyűjti be az adatokat, amelyek gyakran különböző formátumokban és frissítési időközökkel érkeznek. Az online források mellett a cég helyi mérőeszközöket is alkalmaz, például hőmérőket és csapadékmérőket, amelyek szintén manuális adatgyűjtést igényelnek. Mindezek a források azonban nem kapcsolódnak egymáshoz, így a munkavállalóknak gyakran több helyről kell külön-külön összegyűjteniük az információkat.
