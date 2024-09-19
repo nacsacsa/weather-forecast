@@ -56,3 +56,37 @@ Feladatuk a háttérfolyamatok összekötése a kinézettel, adatbázis összek�
 
 #### - Törvényi előírások, szabványok:
 - GDPR-nek való megfelelés
+
+## 5. Funkcionális terv
+### Rendszerszereplők:
+- Admin
+- Felhasználó
+
+### Rendszerhasználati esetek és lefutásaik:
+#### ● ADMIN:
+- Teljes hozzáférése van a rendszerhez
+- A felhasználói adatokat látják, változtathatják
+- Felhasználó hozzáadására, törlésére van lehetőségük
+- Képes lekérdezni az időjárás adatokat
+- Le tudja tölteni az időjárás táblázatát
+
+#### ● Felhasználó
+- Képes lekérdezni az időjárás adatokat
+- Le tudja tölteni az időjárás táblázatát
+
+### Menü-hierarchiák:
+#### ● BEJELENTKEZÉS
+- Bejelentkezési felület
+#### ● MAIN MENÜ
+- Időjárás lekérdezés
+- Táblázat, mely tartalmazza a keresés adatait
+- Táblázat letöltés
+- Új felhasználó hozzáadása (Admin)
+- Kijelentkezés
+
+### Képernyőtervek
+##### BEJELENTKEZÉS
+![](kepek/bejelentkezes_kepernyoterv.png)
+
+##### MAIN MENÜ
+![](kepek/mainmenu_kepernyoterv.png)
