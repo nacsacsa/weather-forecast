@@ -35,3 +35,7 @@ Feladatuk a háttérfolyamatok összekötése a kinézettel, adatbázis összek�
 
 
 
+## 3. Üzleti folyamatok modellje
+
+![](kepek/uzleti_folyamatok_abra.png)
+
