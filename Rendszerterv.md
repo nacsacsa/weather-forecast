@@ -39,3 +39,20 @@ Feladatuk a háttérfolyamatok összekötése a kinézettel, adatbázis összek�
 
 ![](kepek/uzleti_folyamatok_abra.png)
 
+## 4. Követelmények
+#### - Funkcionális követelmények:
+- Bejelentkező felület
+- Felhasználók adatainak tárolása.
+- A rendszer valós adatokat kell szolgáljon
+- Kereső biztosítása, melyben adott városra lehet szűrni
+- Táblázatszerűen mutatni az adott város hőmérsékletét, csapadék mennyiségét, páratartalmát és szélsebességét
+- A felhasználók számára lehetőséget kell biztosítani előrejelzések lekérdezésére (napi, heti, havi)
+- Történelmi időjárási adatokhoz való hozzáférés, amelyek legalább az elmúlt öt évet lefedik
+- CSV állomány exportálása/letöltése, amely tartalmazza az adott város időjárás adatait
+- Reszponzivitás, hogy különböző eszközökön (mobil, tablet, PC) egyaránt jól működjön
+
+#### - Nem funkcionális követelmények:
+- A felhasználók nem juthatnak hozzá más felhasználók személyes adataihoz a nevükön és azonosítóikon kívül.
+
+#### - Törvényi előírások, szabványok:
+- GDPR-nek való megfelelés
