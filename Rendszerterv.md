@@ -1,0 +1,6 @@
+# Rendszerterv
+
+## 1. A rendszer célja
+A FarmCrop Technologies célja egy olyan webes alkalmazás fejlesztése, amely valós idejű és történelmi időjárási adatokat biztosít a mezőgazdasági vállalkozások számára. A rendszer középpontjában a precíziós gazdálkodás támogatása áll, amelyhez elengedhetetlen az időjárási tényezők folyamatos figyelése. A gazdák számára az időjárási adatokhoz való azonnali hozzáférés lehetőséget teremt a döntéshozatal optimalizálására, a termelékenység növelésére és a kockázatok csökkentésére.
+
+A rendszernek képesnek kell lennie arra, hogy valós idejű adatokat jelenítsen meg hőmérséklet, páratartalom, csapadék és szélsebesség tekintetében, valamint hosszabb távú előrejelzéseket adjon. A történelmi adatokkal történő elemzés lehetőséget ad a múltbéli időjárási események megismerésére, ami fontos a termények időbeli viselkedésének megértésében. A rendszernek továbbá könnyen kezelhetőnek kell lennie, reszponzívnak, és különböző eszközökön is működnie kell, beleértve az okostelefonokat és táblagépeket.
