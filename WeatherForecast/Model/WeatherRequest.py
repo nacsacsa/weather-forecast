@@ -1,65 +1,124 @@
 import urllib.request
 import sys
+from typing import Final
 
 import json
+import re
 from types import SimpleNamespace
 
-API_KEY = "6QCRXBDRDQK26Y8TT6S7YPJ2S"
+class WeatherForecast:
 
-def weather_data_request(city: str, start_date: str, end_date: str):
-    """
+    API_KEY: Final = "6QCRXBDRDQK26Y8TT6S7YPJ2S"
+    Daily = True
+    Hourly = True
+    Base_URL = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{}"
+    Middle_URL = "?unitGroup=metric"
+    End_URL = "&key={}&contentType=json"
 
-    Ez a fügvény egy várost és két dátumot vár, ami alapján visszaad egy olyan objektumot, ami
-    az időjárást adja vissza a megadott vársoban a két időpont között.
+    def __init__(self, daily : bool, hourly : bool):
+        self.Daily = daily
+        self.Hourly = hourly
 
-    Paraméterek:
+    def weather_data_request(self, city: str, start_date: str, end_date: str):
+        """
 
-    city (str): A várso neve.
+        Ez a fügvény egy várost és két dátumot vár, ami alapján visszaad egy olyan objektumot, ami
+        az időjárást adja vissza a megadott vársoban a két időpont között.
 
-    start_date (str): A kezdő dátum, formátuma (yyyy-MM-dd).
+        Paraméterek:
 
-    end_date (str): A vég dátum, formátuma (yyyy-MM-dd).
+        city (str): A várso neve.
 
-    return:
-    Egy olyan objektumot ami tartalmazza az időjárási adatokat
-    """
-    # API lekérés
-    result_bytes = urllib.request.urlopen(
-        "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{}/{}/{}"
-        "?unitGroup=metric&key={}&contentType=json".format(city, start_date, end_date, API_KEY))
+        start_date (str): A kezdő dátum, formátuma (yyyy-MM-dd).
 
-    # JSON formátumba átalakítás
-    json_data = str(json.load(result_bytes))
-    json_data = json_data.replace("\'", "\"")
-    json_data = json_data.replace("None", "null")
-    data = json.loads(json_data, object_hook=lambda d: SimpleNamespace(**d))
+        end_date (str): A vég dátum, formátuma (yyyy-MM-dd).
 
-    # Visszaadjuk az objektumot
-    return data
+        return:
+        Egy olyan objektumot ami tartalmazza az időjárási adatokat
+        """
 
-def weather_data_request(city: str):
-    """
+        url = self.Base_URL
 
-    Ez a fügvény egy várost kér, ami alapján a következő 15 napi előrejelzés adatait tudja visszaadni
-    egy objektumban.
+        # Ha üresen marad a város, akkor Nonenal tér vissza
+        if city == "":
+            return None
 
-    Paraméterek:
+        # Ha a dátumok formázása nem megfelelő, akkor Nonenal tér vissza
+        matcher = re.compile('[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]')
+        if  not matcher.match(start_date) or  not matcher.match(end_date):
+            return None
 
-    city (str): A várso neve.
+        url += "/{}/{}"
+        url += self.Middle_URL
 
-    return:
-    Egy olyan objektumot ami tartalmazza az időjárási adatokat
-    """
-    # API lekérés
-    result_bytes = urllib.request.urlopen(
-        "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{}"
-        "?unitGroup=metric&key={}&contentType=json".format(city, API_KEY))
+        if  self.Daily == False and self.Hourly == False:
+            url += "&include=alerts%2Ccurrent"
+        elif self.Daily == False and self.Hourly == True:
+            url += "&include=alerts%2Ccurrent%2Chours"
+        elif self.Daily == True and self.Hourly == False:
+            url += "&include=alerts%2Ccurrent%2Cdays"
+        else:
+            url += "&include=hours%2Cdays%2Ccurrent%2Calerts"
 
-    # JSON formátumba átalakítás
-    json_data = str(json.load(result_bytes))
-    json_data = json_data.replace("\'", "\"")
-    json_data = json_data.replace("None", "null")
-    data = json.loads(json_data, object_hook=lambda d: SimpleNamespace(**d))
+        url += self.End_URL
 
-    # Visszaadjuk az objektumot
-    return data
+        # API lekérés
+        result_bytes = urllib.request.urlopen(
+            url.format(city, start_date, end_date, self.API_KEY))
+
+        # JSON formátumba átalakítás
+        json_data = str(json.load(result_bytes))
+        json_data = json_data.replace("\'", "\"")
+        json_data = json_data.replace("None", "null")
+
+        data = json.loads(json_data, object_hook=lambda d: SimpleNamespace(**d))
+
+        # Visszaadjuk az objektumot
+        return data
+
+    def weather_data_request_simple(self, city: str):
+        """
+
+        Ez a fügvény egy várost kér, ami alapján a következő 15 napi előrejelzés adatait tudja visszaadni
+        egy objektumban.
+
+        Paraméterek:
+
+        city (str): A várso neve.
+
+        return:
+        Egy olyan objektumot ami tartalmazza az időjárási adatokat
+        """
+
+        url = self.Base_URL
+
+        # Ha üresen marad a város, akkor Nonenal tér vissza
+        if city == "":
+            return None
+
+        url += self.Middle_URL
+
+        if self.Daily == False and self.Hourly == False:
+            url += "&include=alerts%2Ccurrent"
+        elif self.Daily == False and self.Hourly == True:
+            url += "&include=alerts%2Ccurrent%2Chours"
+        elif self.Daily == True and self.Hourly == False:
+            url += "&include=alerts%2Ccurrent%2Cdays"
+        else:
+            url += "&include=hours%2Cdays%2Ccurrent%2Calerts"
+
+        url += self.End_URL
+
+        # API lekérés
+        result_bytes = urllib.request.urlopen(
+           url.format(city, self.API_KEY))
+
+        # JSON formátumba átalakítás
+        json_data = str(json.load(result_bytes))
+        json_data = json_data.replace("\'", "\"")
+        json_data = json_data.replace("None", "null")
+
+        data = json.loads(json_data, object_hook=lambda d: SimpleNamespace(**d))
+
+        # Visszaadjuk az objektumot
+        return data
