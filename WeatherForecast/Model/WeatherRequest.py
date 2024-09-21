@@ -43,6 +43,9 @@ class WeatherForecast:
         if city == "":
             return None
 
+        if  start_date == "" and end_date == "":
+            return self.weather_data_request_simple(city)
+
         # Ha a dátumok formázása nem megfelelő, akkor Nonenal tér vissza
         matcher = re.compile('[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]')
         if  not matcher.match(start_date) or  not matcher.match(end_date):
@@ -63,8 +66,13 @@ class WeatherForecast:
         url += self.End_URL
 
         # API lekérés
-        result_bytes = urllib.request.urlopen(
-            url.format(city, start_date, end_date, self.API_KEY))
+        try:
+            result_bytes = urllib.request.urlopen(url.format(city, start_date, end_date, self.API_KEY))
+        except urllib.error.HTTPError as e:
+            return None
+
+        except  urllib.error.URLError as e:
+            return None
 
         # JSON formátumba átalakítás
         json_data = str(json.load(result_bytes))
@@ -72,6 +80,9 @@ class WeatherForecast:
         json_data = json_data.replace("None", "null")
 
         data = json.loads(json_data, object_hook=lambda d: SimpleNamespace(**d))
+
+        if data == "Bad API Request:Invalid location parameter value.":
+            return None
 
         # Visszaadjuk az objektumot
         return data
@@ -110,8 +121,13 @@ class WeatherForecast:
         url += self.End_URL
 
         # API lekérés
-        result_bytes = urllib.request.urlopen(
-           url.format(city, self.API_KEY))
+        try:
+            result_bytes = urllib.request.urlopen(url.format(city, self.API_KEY))
+        except urllib.error.HTTPError as e:
+            return None
+
+        except  urllib.error.URLError as e:
+            return None
 
         # JSON formátumba átalakítás
         json_data = str(json.load(result_bytes))
