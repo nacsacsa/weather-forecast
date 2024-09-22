@@ -105,6 +105,6 @@ Az alkalmazás háromrétegű architektúrát követ, amely elválasztja az adat
 - Integrálódik az időjárási szolgáltatások API-jaival. 
 ### - A harmadik réteg az adatbázis réteg: 
 - Biztosítja a történelmi és valós idejű adatok tárolását. 
-- Az adatbázis relációs adatbáziskezelő rendszert Oracle SQL-t használ.
+- Az adatbázis relációs adatbáziskezelő rendszert MySQL-t használ.
 - Lehetővé teszi az adatok gyors keresését és elemzését.
 
