@@ -91,22 +91,30 @@ Feladatuk a háttérfolyamatok összekötése a kinézettel, adatbázis összek�
 ##### MAIN MENÜ
 ![](kepek/mainmenu_kepernyoterv.png)
 
-## 6. Architekturális terv
-Az alkalmazás háromrétegű architektúrát követ, amely elválasztja az adatfeldolgozási logikát a felhasználói interfésztől. 
+## 6. Fizikai környezet
+- A projekt egy webalkalmazás, ami minden olyan platformon elérhető, amin megtalálható valamilyen böngésző.
+- Nincsenek megvásárolt komponenseink.
+- Fejlesztői eszközök:
+  - Notepad++
+  - Visual Studio Code
+  - MySQL
 
-### - Az első réteg a prezentációs réteg:  
-- A felhasználók interakcióba lépnek az alkalmazással. 
+## 7. Architekturális terv
+Az alkalmazás háromrétegű architektúrát követ, amely elválasztja az adatfeldolgozási logikát a felhasználói interfésztől.
+
+### - Az első réteg a prezentációs réteg:
+- A felhasználók interakcióba lépnek az alkalmazással.
 - Ez a réteg a reszponzív felhasználói felületet tartalmazza.
 - HTML, CSS és JavaScript alapú.
 - Backend szolgáltatásokkal REST API-kon keresztül kommunikál.
 ### - A második réteg az alkalmazási logika réteg:
-- Felelős az üzleti szabályok és funkciók végrehajtásáért. 
+- Felelős az üzleti szabályok és funkciók végrehajtásáért.
 - Ez a réteg Java vagy Python alapú.
-- Integrálódik az időjárási szolgáltatások API-jaival. 
-### - A harmadik réteg az adatbázis réteg: 
-- Biztosítja a történelmi és valós idejű adatok tárolását. 
+- Integrálódik az időjárási szolgáltatások API-jaival.
+### - A harmadik réteg az adatbázis réteg:
+- Biztosítja a történelmi és valós idejű adatok tárolását.
 - Az adatbázis relációs adatbáziskezelő rendszert MySQL-t használ.
 - Lehetővé teszi az adatok gyors keresését és elemzését.
 
-## 7. Adatbázis modell
+## 8. Adatbázis modell
 ![](kepek/adatbazis_terv.png)
