@@ -108,3 +108,5 @@ Az alkalmazás háromrétegű architektúrát követ, amely elválasztja az adat
 - Az adatbázis relációs adatbáziskezelő rendszert MySQL-t használ.
 - Lehetővé teszi az adatok gyors keresését és elemzését.
 
+## 7. Adatbázis modell
+![](kepek/adatbazis_terv.png)
