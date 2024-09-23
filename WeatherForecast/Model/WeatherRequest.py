@@ -6,8 +6,8 @@ import json
 import re
 from types import SimpleNamespace
 
-class WeatherForecast:
 
+class WeatherForecast:
     API_KEY: Final = "6QCRXBDRDQK26Y8TT6S7YPJ2S"
     Daily = True
     Hourly = True
@@ -15,13 +15,12 @@ class WeatherForecast:
     Middle_URL = "?unitGroup=metric"
     End_URL = "&key={}&contentType=json"
 
-    def __init__(self, daily : bool, hourly : bool):
+    def __init__(self, daily: bool, hourly: bool):
         self.Daily = daily
         self.Hourly = hourly
 
     def weather_data_request(self, city: str, start_date: str, end_date: str):
         """
-
         Ez a fügvény egy várost és két dátumot vár, ami alapján visszaad egy olyan objektumot, ami
         az időjárást adja vissza a megadott vársoban a két időpont között.
 
@@ -43,18 +42,18 @@ class WeatherForecast:
         if city == "":
             return None
 
-        if  start_date == "" and end_date == "":
+        if start_date == "" and end_date == "":
             return self.weather_data_request_simple(city)
 
         # Ha a dátumok formázása nem megfelelő, akkor Nonenal tér vissza
         matcher = re.compile('[0-2][0-9][0-9][0-9]-[0-1][0-9]-[0-3][0-9]')
-        if  not matcher.match(start_date) or  not matcher.match(end_date):
+        if not matcher.match(start_date) or not matcher.match(end_date):
             return None
 
         url += "/{}/{}"
         url += self.Middle_URL
 
-        if  self.Daily == False and self.Hourly == False:
+        if self.Daily == False and self.Hourly == False:
             url += "&include=alerts%2Ccurrent"
         elif self.Daily == False and self.Hourly == True:
             url += "&include=alerts%2Ccurrent%2Chours"
@@ -89,7 +88,6 @@ class WeatherForecast:
 
     def weather_data_request_simple(self, city: str):
         """
-
         Ez a fügvény egy várost kér, ami alapján a következő 15 napi előrejelzés adatait tudja visszaadni
         egy objektumban.
 
