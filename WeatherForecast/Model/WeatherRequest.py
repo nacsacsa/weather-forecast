@@ -47,7 +47,7 @@ class WeatherForecast:
             return self.weather_data_request_simple(city)
 
         # Ha a dátumok formázása nem megfelelő, akkor Nonenal tér vissza
-        matcher = re.compile('[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]')
+        matcher = re.compile('[0-2][0-9][0-9][0-9]-[0-1][0-9]-[0-3][0-9]')
         if  not matcher.match(start_date) or  not matcher.match(end_date):
             return None
 
