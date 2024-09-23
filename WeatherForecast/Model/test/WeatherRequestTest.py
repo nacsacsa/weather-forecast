@@ -5,22 +5,22 @@ from WeatherForecast.Model.WeatherRequest import WeatherForecast
 
 class MyTestCase(unittest.TestCase):
 
-    def test_contributor1(self):
+    def test_konstruktor1(self):
         w = WeatherForecast(False, False)
         self.assertEqual(w.Daily, False)
         self.assertEqual(w.Hourly, False)
 
-    def test_contributor2(self):
+    def test_konstruktor2(self):
         w = WeatherForecast(True, True)
         self.assertEqual(w.Daily, True)
         self.assertEqual(w.Hourly, True)
 
-    def test_contributor3(self):
+    def test_konstruktor3(self):
         w = WeatherForecast(True, False)
         self.assertEqual(w.Daily, True)
         self.assertEqual(w.Hourly, False)
 
-    def test_contributor4(self):
+    def test_konstruktor4(self):
         w = WeatherForecast(False, True)
         self.assertEqual(w.Daily, False)
         self.assertEqual(w.Hourly, True)
