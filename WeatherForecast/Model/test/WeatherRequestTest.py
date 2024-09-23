@@ -39,9 +39,14 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(None, w.weather_data_request("Debrecen", "2024.09.21", "2024.09.22"))
         self.assertEqual(None, w.weather_data_request("dgdgdgdgd", "2024.09.21", "2024.09.22"))
 
-    def test_weather_data_request_simple(self):
+    def test_weather_data_request_simple1(self):
         w = WeatherForecast(False, False)
         self.assertEqual(None, w.weather_data_request_simple(""))
+        self.assertEqual(None, w.weather_data_request_simple("dgdgdgd"))
+
+    def test_weather_data_request_simple2(self):
+        w = WeatherForecast(False, False)
+        self.assertEqual("Debrecen", w.weather_data_request_simple("Debrecen").address)
         self.assertEqual(None, w.weather_data_request_simple("dgdgdgd"))
 
 
