@@ -2,16 +2,20 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="styles/loginStyle.css">
 </head>
 <body>
 <h2>Login</h2>
 <div id="main-box-login">
     <form id="loginForm">
         <label for="username">Felhasználó név:</label>
-        <input type="text" placeholder="Felhasználónév" id="username" name="username" required><br><br>
-        <label for="password" >Jelszó:</label>
-        <input type="password" placeholder="Jelszó" id="password" name="password" required><br><br>
+        <input type="text" placeholder="Felhasználónév" id="username" name="username" required>
+
+        <label for="password">Jelszó:</label>
+        <input type="password" placeholder="Jelszó" id="password" name="password" required>
+
         <button type="submit">Login</button>
     </form>
 </div>
