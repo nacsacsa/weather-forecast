@@ -79,3 +79,21 @@ input[type="submit"]:hover {
         width: 100%;
     }
 }
+
+/* Reszponzív dizájn kialakítása 1500px-nél nagyobb képernyőkhöz */
+@media (min-width: 1500px) {
+    body {
+        padding: 10rem;
+    }
+    #main-box {
+        max-width: 800px;
+        padding: 40px;
+    }
+    input[type="text"], input[type="date"], input[type="submit"] {
+        font-size: 24px;
+        padding: 15px;
+    }
+    label {
+        font-size: 20px;
+    }
+}
