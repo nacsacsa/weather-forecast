@@ -36,3 +36,61 @@ label {
     margin-bottom: 5px;
     color: #333;
 }
+
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.4s ease;
+    width: 100%;
+}
+
+/* Hover effekt */
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Reszponzív dizájn kialakítása 600px-nél kisebb képernyőkhöz */
+@media (max-width: 600px) {
+    body {
+        padding: 2rem;
+    }
+
+    #main-box-login {
+        padding: 20px;
+    }
+}
+
+/* Reszponzív dizájn kialakítása 1500px-nél nagyobb képernyőkhöz */
+@media (min-width: 1500px) {
+    #main-box-login {
+        padding: 40px;
+        max-width: 500px;
+    }
+
+    input[type="text"], input[type="password"], button[type="submit"] {
+        font-size: 22px;
+        padding: 15px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+}
