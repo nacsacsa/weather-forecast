@@ -8,14 +8,25 @@
     <link rel="stylesheet" href="styles/indexStyle.css">
 </head>
 <body>
-<form id="form-id">
-    <input type="text" id="city" placeholder="Kérlek adj meg egy várost..." required/>
-    <label for="start-date">Mettől:</label>
-    <input type="date" id="start-date" required/>
-    <label for="end-date">Meddig:</label>
-    <input type="date" id="end-date" required/>
-    <br><br>
-    <input type="submit" value="Keresés"/>
-</form>
+<div id="main-box">
+    <form id="form-id">
+        <div class="input-group">
+            <div>
+                <br>
+                <input type="text" id="city" placeholder="Város" required/>
+            </div>
+            <div>
+                <label for="start-date">Mettől:</label>
+                <input type="date" id="start-date" required/>
+            </div>
+            <div>
+                <label for="end-date">Meddig:</label>
+                <input type="date" id="end-date" required/>
+            </div>
+        </div>
+        <br>
+        <input type="submit" id="search" value="Keresés"/>
+    </form>
+</div>
 </body>
 </html>
