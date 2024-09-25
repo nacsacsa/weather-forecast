@@ -6,3 +6,13 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('start-date').value = today;
     document.getElementById('end-date').value = today;
 });
+
+document.getElementById('form-id').addEventListener('submit', function(event) {
+    event.preventDefault(); // Ne töltse újra az oldalt
+
+    const city = document.getElementById('city').value;
+    const startDate = document.getElementById('start-date').value;
+    const endDate = document.getElementById('end-date').value;
+
+    console.log({city, startDate, endDate}); // Ellenőrizd a konzolon, hogy mit küldesz
+});
