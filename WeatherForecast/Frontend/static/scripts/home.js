@@ -28,4 +28,10 @@ document.getElementById('form-id').addEventListener('submit', function(event) {
             end_date: endDate,
         }),
     })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
 });
