@@ -82,4 +82,9 @@ document.getElementById('form-id').addEventListener('submit', function(event) {
                 forecastTables.appendChild(table);
             }
         })
+        .catch(error => {
+            console.error('Error:', error);
+            const forecastTables = document.getElementById('forecast-tables');
+            forecastTables.innerHTML = `<p>Hiba történt, ellenőrizd az API kulcsot: ${error.message}</p>`;
+        });
 });
