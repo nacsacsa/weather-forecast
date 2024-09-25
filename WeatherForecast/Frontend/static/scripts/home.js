@@ -15,4 +15,17 @@ document.getElementById('form-id').addEventListener('submit', function(event) {
     const endDate = document.getElementById('end-date').value;
 
     console.log({city, startDate, endDate}); // Ellenőrizd a konzolon, hogy mit küldesz
+
+    // Kérdés küldése a Flask backendhez
+    fetch('/weather', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            city: city,
+            start_date: startDate,
+            end_date: endDate,
+        }),
+    })
 });

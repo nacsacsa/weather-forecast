@@ -4,7 +4,6 @@ from typing import Final
 
 import json
 import re
-from types import SimpleNamespace
 
 
 class WeatherForecast:
@@ -66,25 +65,20 @@ class WeatherForecast:
 
         # API lekérés
         try:
-            result_bytes = urllib.request.urlopen(url.format(city, start_date, end_date, self.API_KEY))
+            formatted_url = url.format(city, start_date, end_date, self.API_KEY)  # Formázott URL
+            print(f"Fetching weather data from URL: {formatted_url}")  # Nyomtatás hibakereséshez
+
+            result_bytes = urllib.request.urlopen(formatted_url)
+            print(f"Response code: {result_bytes.getcode()}")  # Ellenőrizzük a válasz kódot
+
+            # JSON formátumba átalakítás
+            json_data = json.load(result_bytes)
+            return json_data
         except urllib.error.HTTPError as e:
             return None
 
         except  urllib.error.URLError as e:
             return None
-
-        # JSON formátumba átalakítás
-        json_data = str(json.load(result_bytes))
-        json_data = json_data.replace("\'", "\"")
-        json_data = json_data.replace("None", "null")
-
-        data = json.loads(json_data, object_hook=lambda d: SimpleNamespace(**d))
-
-        if data == "Bad API Request:Invalid location parameter value.":
-            return None
-
-        # Visszaadjuk az objektumot
-        return data
 
     def weather_data_request_simple(self, city: str):
         """
@@ -120,19 +114,20 @@ class WeatherForecast:
 
         # API lekérés
         try:
-            result_bytes = urllib.request.urlopen(url.format(city, self.API_KEY))
+            formatted_url = url.format(city, self.API_KEY)  # Formázott URL
+            print(f"Fetching simple weather data from URL: {formatted_url}")  # Hibakereséshez
+
+            result_bytes = urllib.request.urlopen(formatted_url)
+            print(f"Response code: {result_bytes.getcode()}")  # Ellenőrizzük a válasz kódot
+
+            # JSON formátumba átalakítás
+            json_data = str(json.load(result_bytes))
+            json_data = json_data.replace("\'", "\"")
+            json_data = json_data.replace("None", "null")
+
+            return json_data
         except urllib.error.HTTPError as e:
             return None
 
         except  urllib.error.URLError as e:
             return None
-
-        # JSON formátumba átalakítás
-        json_data = str(json.load(result_bytes))
-        json_data = json_data.replace("\'", "\"")
-        json_data = json_data.replace("None", "null")
-
-        data = json.loads(json_data, object_hook=lambda d: SimpleNamespace(**d))
-
-        # Visszaadjuk az objektumot
-        return data
