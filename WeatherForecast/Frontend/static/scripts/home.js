@@ -34,4 +34,52 @@ document.getElementById('form-id').addEventListener('submit', function(event) {
             }
             return response.json();
         })
+        .then(data => {
+            const forecastTables = document.getElementById('forecast-tables');
+            forecastTables.innerHTML = ""; // Töröljük az előző eredményeket
+
+            if (data.error) {
+                forecastTables.innerHTML = `<p>${data.error}</p>`;
+            } else {
+                // Létrehozunk egy táblázatot
+                const table = document.createElement('table');
+                table.className = 'forecast-table';
+
+                // Hozzáadjuk a táblázat fejlécét
+                const thead = document.createElement('thead');
+                // TODO
+                thead.innerHTML = `
+                    <tr>
+                        <th>Dátum</th>
+                        <th>Hőmérséklet (°C)</th>
+                        <th>Legmelegebb (°C)</th>
+                        <th>Leghűvösebb (°C)</th>
+                        <th>Időjárás</th>
+                        <th>Szélsebesség (km/h)</th>
+                        <th>Csapadékmennyiség (mm)</th>
+                        <th>Páratartalom (%)</th>
+                    </tr>
+                `;
+                table.appendChild(thead);
+
+                // Hozzáadjuk a táblázat testét
+                const tbody = document.createElement('tbody');
+                data.days.forEach(day => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${day.datetime}</td>
+                        <td>${day.temp} °C</td>
+                        <td>${day.tempmax} °C</td>
+                        <td>${day.tempmin} °C</td>
+                        <td>${day.conditions}</td>
+                        <td>${day.windspeed} km/h</td>
+                        <td>${day.precip} mm</td>
+                        <td>${day.humidity}%</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+                table.appendChild(tbody);
+                forecastTables.appendChild(table);
+            }
+        })
 });
