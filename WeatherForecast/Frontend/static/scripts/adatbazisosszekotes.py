@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.secret_key = 's3cr3t'
 
 # MySQL konfiguráció
-app.config['MYSQL_HOST'] = '3306'
+app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'weather'
 app.config['MYSQL_DB'] = 'adatbazis'
@@ -32,7 +32,7 @@ def login():
         return redirect(url_for('index')) # Itt átirányítunk a index oldalra
     else:
         flash('Hibás felhasználónév vagy jelszó.')
-        return redirect(url_for('home'))
+        return redirect(url_for('login'))
 
 @app.route('/index')
 def weather_forecast():
