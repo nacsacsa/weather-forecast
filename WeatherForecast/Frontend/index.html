@@ -7,28 +7,32 @@
     <title>Weather Forecast</title>
     <link rel="stylesheet" href="static/styles/indexStyle.css">
 </head>
-<body>
-<div id="main-box">
-    <form id="form-id">
-        <div class="input-group">
-            <div>
-                <label for="city">Helység:</label>
-                <input type="text" id="city" placeholder="Város" required/>
+    <body>
+    <button id="logout-btn" class="logout-button">Kijelentkezés</button>
+    <div id="main-box">
+        <form id="form-id">
+            <div class="input-group">
+                <div>
+                    <label for="city">Helység:</label>
+                    <input type="text" id="city" placeholder="Város" required/>
+                </div>
+                <div>
+                    <label for="start-date">Mettől:</label>
+                    <input type="date" id="start-date" required/>
+                </div>
+                <div>
+                    <label for="end-date">Meddig:</label>
+                    <input type="date" id="end-date" required/>
+                </div>
             </div>
-            <div>
-                <label for="start-date">Mettől:</label>
-                <input type="date" id="start-date" required/>
-            </div>
-            <div>
-                <label for="end-date">Meddig:</label>
-                <input type="date" id="end-date" required/>
-            </div>
-        </div>
-        <br>
-        <input type="submit" id="search" value="Keresés"/>
-    </form>
-</div>
-<div id="forecast-tables"></div>
-<script src="static/scripts/home.js"></script>
-</body>
-</html>
+            <br>
+            <input type="submit" id="search" value="Keresés"/>
+        </form>
+    </div>
+    <div id="forecast-tables"></div>
+
+    <button id="download-btn" class="download-button">Letöltés</button>
+    
+    <script src="static/scripts/home.js"></script>
+    </body>
+    </html>

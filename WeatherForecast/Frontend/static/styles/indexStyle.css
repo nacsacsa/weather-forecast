@@ -5,7 +5,7 @@ body {
     padding: 5rem;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 60vh;
 }
 
@@ -28,7 +28,7 @@ form {
     position: absolute;
     top: 20px;
     right: 20px;
-    background-color: #3498db;
+    background-color: #007bff;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -39,7 +39,7 @@ form {
 }
 
 .logout-button:hover {
-    background-color: #2980b9; 
+    background-color: #007bff; 
 } 
 
 .input-group {
@@ -82,6 +82,24 @@ input[type="submit"] {
 /* Hover effekt */
 input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+.download-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color:  #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color:  #007bff;
 }
 
 /* Reszponzív dizájn kialakítása 600px-nél kisebb képernyőkhöz */
