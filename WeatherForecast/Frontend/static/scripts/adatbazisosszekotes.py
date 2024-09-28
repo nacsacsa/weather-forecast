@@ -29,10 +29,14 @@ def login():
 
     if user:
         flash('Sikeres bejelentkezés!')
-        return redirect(url_for('home'))  # Itt átirányíthatod a felhasználót egy másik oldalra
+        return redirect(url_for('index')) # Itt átirányítunk a index oldalra
     else:
         flash('Hibás felhasználónév vagy jelszó.')
         return redirect(url_for('home'))
+
+@app.route('/index')
+def weather_forecast():
+    return render_template('weather_forecast.html')  # Ez a te HTML fájlod
 
 if __name__ == '__main__':
     app.run(debug=True)
