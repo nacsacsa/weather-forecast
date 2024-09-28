@@ -5,6 +5,28 @@ document.addEventListener('DOMContentLoaded', function() {
     // Dátum mezők alapértelmezett értékének beállítása
     document.getElementById('start-date').value = today;
     document.getElementById('end-date').value = today;
+
+    // Kijelentkezés gomb létrehozása és hozzáadása a DOM-hoz
+    const logoutButton = document.createElement('button');
+    logoutButton.className = 'logout-button';
+    logoutButton.textContent = 'Kijelentkezés';
+    document.body.appendChild(logoutButton);
+
+    // Kijelentkezés eseménykezelő
+    logoutButton.addEventListener('click', function() {
+        // Kijelentkezési folyamat
+        fetch('/logout', { method: 'POST' })
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = '/login'; // Visszairányítás a bejelentkezési oldalra
+                } else {
+                    console.error('Hiba történt a kijelentkezés során.', response.statusText);
+                }
+            })
+            .catch(error => {
+                console.error('Hiba történt a kijelentkezés során.', error);
+            });
+    });
 });
 
 document.getElementById('form-id').addEventListener('submit', function(event) {
@@ -38,8 +60,16 @@ document.getElementById('form-id').addEventListener('submit', function(event) {
             const forecastTables = document.getElementById('forecast-tables');
             forecastTables.innerHTML = ""; // Töröljük az előző eredményeket
 
+            // Letöltés gomb 
+            const downloadButton = document.getElementById('download-btn') || document.createElement('button');
+            downloadButton.id = 'download-btn';
+            downloadButton.className = 'download-button';
+            downloadButton.textContent = 'Letöltés';
+            downloadButton.style.display = 'none'; // Alapértelmezett rejtett
+
             if (data.error) {
                 forecastTables.innerHTML = `<p>${data.error}</p>`;
+                downloadButton.style.display = 'none'; // Ha hiba van, rejtjük a letöltés gombot
             } else {
                 // Létrehozunk egy táblázatot
                 const table = document.createElement('table');
@@ -80,7 +110,27 @@ document.getElementById('form-id').addEventListener('submit', function(event) {
                 });
                 table.appendChild(tbody);
                 forecastTables.appendChild(table);
+
+                // Megjelenítjük a letöltés gombot, ha a táblázat megjelent
+                downloadButton.style.display = 'block'; // Gomb megjelenítése
+                forecastTables.appendChild(downloadButton);
             }
+            // Letöltés gomb eseménykezelő
+            downloadButton.addEventListener('click', function() {
+                // Itt implementálhatod a letöltés logikát 
+                const csvContent = "data:text/csv;charset=utf-8," 
+                    + "Dátum,Hőmérséklet (°C),Legmelegebb (°C),Leghűvösebb (°C),Időjárás,Szélsebesség (km/h),Csapadékmennyiség (mm),Páratartalom (%)\n" 
+                    + data.days.map(day => `${day.datetime},${day.temp},${day.tempmax},${day.tempmin},${day.conditions},${day.windspeed},${day.precip},${day.humidity}`).join("\n");
+
+                const encodedUri = encodeURI(csvContent);
+                const link = document.createElement('a');
+                link.setAttribute('href', encodedUri);
+                link.setAttribute('download', 'weather_forecast.csv');
+                document.body.appendChild(link); 
+
+                link.click();
+                document.body.removeChild(link); 
+            });
         })
         .catch(error => {
             console.error('Error:', error);
