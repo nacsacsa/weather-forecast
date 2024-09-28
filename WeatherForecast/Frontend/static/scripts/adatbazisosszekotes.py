@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, session
 from flask_mysqldb import MySQL
 
 app = Flask(__name__)
@@ -36,7 +36,13 @@ def login():
 
 @app.route('/index')
 def weather_forecast():
-    return render_template('weather_forecast.html')  # Ez a te HTML fájlod
+    return render_template('index.html') 
+
+@app.route('/logout', methods=['POST'])
+def logout():
+    session.clear()  # Session törlése (kijelentkezés)
+    flash('Sikeresen kijelentkeztél!')
+    return redirect(url_for('login'))  # Átirányítás a bejelentkező oldalra
 
 if __name__ == '__main__':
     app.run(debug=True)

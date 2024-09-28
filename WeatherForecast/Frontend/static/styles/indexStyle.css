@@ -24,6 +24,24 @@ form {
     gap: 15px;
 }
 
+.logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #2980b9; 
+} 
+
 .input-group {
     display: flex;
     gap: 15px;
