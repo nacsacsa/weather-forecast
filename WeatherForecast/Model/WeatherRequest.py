@@ -7,7 +7,8 @@ import re
 
 
 class WeatherForecast:
-    API_KEY: Final = "6QCRXBDRDQK26Y8TT6S7YPJ2S"
+    API_KEY: Final = "UQ6XCQUXQYE2DZKMFA8K5Q8UD"
+    """6QCRXBDRDQK26Y8TT6S7YPJ2S"""
     Daily = True
     Hourly = True
     Base_URL = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{}"
